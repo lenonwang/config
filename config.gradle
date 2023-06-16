@@ -1,0 +1,417 @@
+//！！为了更好的进行Lib库版本管理，config.gradle需要通过配置Wiki、运行libVersionControl脚本生成，不允许手动修改此文件！！
+ext {
+    compose_version = '1.0.5'
+    kotlin_version = '1.5.31'
+    kotlinx_version = '1.3.1'
+    buildToolsVersion = "30.0.3"
+    minSdkVersion = 21
+    targetSdkVersion = 33
+    compileSdkVersion = 33
+    supportVersion = "27.1.1"
+    ndkVersion = "21.3.6528147"
+    cmakeVersion = "3.10.2"
+    abiFilters = "armeabi-v7a,arm64-v8a,x86,x86_64"
+
+    businessRunAlone = [
+            adaptation: false
+    ]
+
+    def versions = [:]
+    versions.arouterRegisterVersion = "1.0.2"
+    versions.arouterVersion = "1.4.0"
+    versions.arouterProcessorVersion = "1.2.1"
+    versions.ktxVersion = "1.3.2"
+    versions.lifecycle_runtime_ktx = '2.5.1'
+    versions.appcompat = "1.2.0"
+    versions.recyclerView = "1.1.0"
+    versions.swiperefreshlayout = "1.1.0"
+    versions.cardview = "1.0.0"
+    versions.constraintlayout = "2.1.3"
+    versions.annotation = "1.1.0"
+    versions.multidex = "2.0.1"
+    versions.design = "28.0.0"
+    versions.lifecycle = "2.1.0"
+    versions.lifecycleCompiler = "2.2.0-rc03"
+    versions.okio = "1.15.0"
+    versions.retrofit = "2.3.0"
+    versions.okhttp = "3.12.10"
+    versions.fastjson = "1.2.73"
+    versions.bugly = "3.1.0"
+    versions.mpos = "1.0.8@aar"
+    versions.firebaseBom = "26.1.0"
+    // 版本要与build tool gradle版本一致
+    versions.databinding = "3.5.4"
+    versions.material = "1.3.0"
+    versions.tuhuToast = "1.0.1@aar"
+    versions.tuhuWaterMark = "1.0.5@aar"
+    versions.tuhuLog = "1.0.3@aar"
+    versions.platformWework = "1.0.2@aar"
+    versions.platformWeb = "1.0.6@aar"
+    versions.pictureCompress = "1.0.1@aar"
+    versions.tuhuWeb = "1.0.6@aar"
+    versions.tuhuShare = "1.0.8@aar"
+    versions.tuhuProcess = "1.0.1@aar"
+    versions.tuhuDt = "2.1.6"
+    versions.tuhuUpload = "1.0.4@aar"
+    versions.tuhuSensorBury = "1.0.4@aar"
+    versions.allinpay = "1.0.0@aar"
+    versions.tuhuDialog = "1.0.8@aar"
+    versions.tuhuVideoRecorder = "1.2.1@aar"
+    versions.mmkv = "1.2.10"
+    versions.tuhuCertification = "0.0.1@aar"
+    versions.tuhuUtils = "1.1.2@aar"
+    versions.tuhuZiya = "1.0.2@aar"
+    versions.tuhuPermission = "1.0.1@aar"
+    versions.tuhuBanner = "1.0.0@aar"
+    versions.tuhuMonitorScreenShot = "1.0.0@aar"
+    versions.tuhuPhotoview = "1.0.0@aar"
+    versions.tuhuStickyView = "1.0.0@aar"
+    versions.tuhuSpeechText = "1.1.0@aar"
+    versions.tuhuPulltorefresh = "1.0.0@aar"
+    versions.tuhuMVVM = "1.0.1@aar"
+    versions.tuhuScancode = "1.0.3@aar"
+    versions.tuhuImageloader = "1.0.2@aar"
+    versions.tuhuLibWidget = "1.0.6@aar"
+    versions.tuhuLibLocation = "1.0.0@aar"
+    versions.tuhuLibPushCore = "1.0.1@aar"
+    versions.tuhuLibPushXiaoMi = "1.0.1@aar"
+    versions.tuhuLibPushHuaWei = "1.0.1@aar"
+    versions.tuhuGuide = "1.0.0@aar"
+    versions.tuhuFileReader = "1.0.1@aar"
+    versions.tuhuVideoPlayer = "1.1.0@aar"
+    versions.tuhuInput = "1.0.2@aar"
+    versions.tuhuPlatformWidget = "1.0.4@aar"
+    versions.tuhuPlatformTakePhoto = "1.1.3@aar"
+    versions.tuhuPlatformScancode = "1.0.1@aar"
+    versions.tuhuPlatformTool = "1.0.7@aar"
+    versions.tuhuPlatformDispatch = "1.1.4@aar"
+    versions.platform_dialog = "1.0.3@aar"
+    versions.tuhuPlatformNetwork = "1.0.5@aar"
+    versions.tuhuBusinessBase = "1.3.8@aar"
+    versions.tuhuBusinessLogin = "1.0.6@aar"
+    versions.tuhuBusinessOrder = "1.3.4@aar"
+    versions.tuhuBusinessCheckCar = "1.0.4@aar"
+    versions.tuhuBusinessWeb = "1.0.8@aar"
+    versions.tuhuBusinessQuotation = "1.1.4@aar"
+
+    depsLibs = [
+            tuhuBusinessOrder       : "com.tuhu.android:business_order:$versions.tuhuBusinessOrder",
+            tuhuBusinessCheckCar    : "com.tuhu.android:business_checkcar:$versions.tuhuBusinessCheckCar",
+            alipay                  : "com.tuhu:alipaySdk:15.6.5@aar",
+            platformPay             : "com.tuhu.android:platform_pay:1.0.2@aar",
+            platformDialog          : "com.tuhu.android:platform_dialog:$versions.platform_dialog",
+            material                : "com.google.android.material:material:$versions.material",
+            dagger                  : "com.google.dagger:dagger:2.15",
+            daggerAndroid           : "com.google.dagger:dagger-android:2.15",
+            daggerSupport           : "com.google.dagger:dagger-android-support:2.11",
+            daggerProcessor         : "com.google.dagger:dagger-android-processor:2.11",
+            daggerCompiler          : "com.google.dagger:dagger-compiler:2.11",
+            design                  : "com.android.support:design:$versions.design",
+            appcompat               : "androidx.appcompat:appcompat:$versions.appcompat",
+            swiperefreshlayout      : "androidx.swiperefreshlayout:swiperefreshlayout:$versions.swiperefreshlayout",
+            cardview                : "androidx.cardview:cardview:$versions.cardview",
+            constraintlayout        : "androidx.constraintlayout:constraintlayout:$versions.constraintlayout",
+            annotation              : "androidx.annotation:annotation:$versions.annotation",
+            multidex                : "androidx.multidex:multidex:$versions.multidex",
+            lifecycle               : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle",
+            lifecycleCompiler       : "androidx.lifecycle:lifecycle-compiler:$versions.lifecycleCompiler",
+            vectordrawable          : "androidx.vectordrawable:vectordrawable:1.1.0",
+            navigationFragment      : "androidx.navigation:navigation-fragment:2.3.2",
+            navigationUi            : "androidx.navigation:navigation-ui:2.3.2",
+            //kotlin
+            kotlinJdk               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            kotlinReflect           : "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version",
+            kotlinx_core            : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_version",
+            kotlinx_android         : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_version",
+            kotlinx_test            : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinx_version",
+            ktx                     : "androidx.core:core-ktx:$versions.ktxVersion",
+            lifecycle_runtime_ktx   : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle_runtime_ktx",
+            //
+            databinding             : "com.android.databinding:compiler:$versions.databinding",
+            okio                    : "com.squareup.okio:okio:$versions.okio",
+            retrofit                : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+            retrofitConverterGson   : "com.squareup.retrofit2:converter-gson:2.3.0",
+            retrofitRxjava          : "com.squareup.retrofit2:adapter-rxjava2:2.3.0",
+            retrofitConverterScalars: "com.squareup.retrofit2:converter-scalars:2.3.0",
+            okhttp                  : "com.squareup.okhttp3:okhttp:$versions.okhttp",
+            rxandroid               : "io.reactivex.rxjava2:rxandroid:2.1.0",
+            rxjava                  : "io.reactivex.rxjava2:rxjava:2.2.3",
+
+            rxActivityResult        : "com.github.VictorAlbertos:RxActivityResult:0.5.0-2.x",
+            arouter                 : "com.alibaba:arouter-api:$versions.arouterVersion",
+            arouterCompiler         : "com.alibaba:arouter-compiler:$versions.arouterProcessorVersion",
+            arouterRegister         : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.arouterRegisterVersion",
+            fastjson                : "com.alibaba:fastjson:$versions.fastjson",
+            crashreport             : "com.tencent.bugly:crashreport:$versions.bugly",
+            nativecrashreport       : "com.tencent.bugly:nativecrashreport:3.7.1",
+            firebaseBom             : "com.google.firebase:firebase-bom:$versions.firebaseBom",
+            fireBaseCrashlytics     : "com.google.firebase:firebase-crashlytics",
+            fireBaseCrashlyticsKtx  : "com.google.firebase:firebase-crashlytics-ktx",
+            fireBaseAnalytics       : "com.google.firebase:firebase-analytics",
+            fireBaseAnalyticsKtx    : "com.google.firebase:firebase-analytics-ktx",
+            wechatSdk               : "com.tencent.mm.opensdk:wechat-sdk-android:6.8.0",
+            qmui                    : "com.qmuiteam:qmui:1.4.0",
+            doraemonkitNoOp         : "com.didichuxing.doraemonkit:dokitx-no-op:3.3.5",
+            tuhuMpos                : "com.tuhu.android:lib_mpos:$versions.mpos",
+            tuhuNetperformance      : "com.tuhu.netperformance:tuhunetperformance:1.0.4",
+            tuhuKefu                : "com.tuhu.kefu:tuhukefu:1.18.21-release",
+            tuhuMock                : "cn.tuhu:mock-sdk-release:1.1.3",
+            tuhuPushMi              : "com.tuhu.android:lib_push_xiaomi:$versions.tuhuLibPushXiaoMi",
+            tuhuPushHuawei          : "com.tuhu.android:lib_push_huawei:$versions.tuhuLibPushHuaWei",
+            tuhuEw                  : "cn.tuhu:ew:2.6.6",
+            tuhuTiny                : "com.tuhu.android:lib_tiny:1.0.0@aar",
+            tuhuOcr                 : "com.tuhu.android:lib_ocr:1.1.3@aar",
+            sensorsAnalyticsSDK     : "com.sensorsdata.analytics.android:SensorsAnalyticsSDK:3.1.4",
+            neteaseBasesdk          : "com.netease.nimlib:basesdk:5.6.1",
+            walle                   : "com.meituan.android.walle:library:1.1.6",
+            lottie                  : "com.airbnb.android:lottie:3.5.0",
+            nineoldandroids         : "com.nineoldandroids:library:2.4.0",
+            recyclerView            : "androidx.recyclerview:recyclerview:$versions.recyclerView",
+            recyclerviewHelper      : "com.tuhu.android:lib_adapter:1.0.0@aar",
+            agentweb                : "com.just.agentwebX5:agentwebX5:2.0.0",
+            pickerView              : "com.contrarywind:Android-PickerView:4.1.8",
+            rxbinding               : "com.jakewharton.rxbinding2:rxbinding:2.0.0",
+            ormliteAndroid          : "com.j256.ormlite:ormlite-android:5.0",
+            ormliteCore             : "com.j256.ormlite:ormlite-core:5.0",
+            camerakit               : "com.tuhu.android:lib_camera:1.2.6@aar",
+            camerakitJpegkit        : "com.camerakit:jpegkit:0.1.0",
+            glide                   : "com.github.bumptech.glide:glide:4.9.0",
+            glideCompiler           : "com.github.bumptech.glide:compiler:4.9.0",
+            glideOkhttp3            : "com.github.bumptech.glide:okhttp3-integration:4.6.1",
+            glideTransformation     : "jp.wasabeef:glide-transformations:4.0.1",
+            zxing                   : "com.google.zxing:core:3.3.0",
+            logInterceptor          : "com.squareup.okhttp3:logging-interceptor:3.12.10",
+            diskLruCache            : "com.jakewharton:disklrucache:2.0.2",
+            junit                   : "junit:junit:4.13.1",
+            junitExt                : "androidx.test.ext:junit:1.1.2",
+            espressoTest            : "androidx.test.espresso:espresso-core:3.3.0",
+            serviceLoader           : "com.tuhu.android:lib_serviceLoader:0.0.3@aar",
+            tuhuhttp                : "com.tuhu.android:lib_http:1.1.3@aar",
+            tuhuWaterMark           : "com.tuhu.android:lib_watermark:$versions.tuhuWaterMark",
+            tuhuToast               : "com.tuhu.android:lib_toast:$versions.tuhuToast",
+            tuhuLog                 : "com.tuhu.android:lib_log:$versions.tuhuLog",
+            platformWework          : "com.tuhu.android:platform_wework:$versions.platformWework",
+            platformWeb             : "com.tuhu.android:platform_web:$versions.platformWeb",
+            pictureCompress         : "com.tuhu.android:lib_picture_compress:$versions.pictureCompress",
+            huaweiScan              : "com.huawei.hms:scan:1.2.5.300",
+            ew                      : "com.tuhu:tuhu-ew:0.0.5-SNAPSHOT",
+            tuhuWeb                 : "com.tuhu.android:lib_web:$versions.tuhuWeb",
+            tuhuShare               : "com.tuhu.android:lib_share:$versions.tuhuShare",
+            tuhuProcess             : "com.tuhu.android:lib_process:$versions.tuhuProcess",
+            tuhuDt                  : "com.tuhu.android:lib_dt:$versions.tuhuDt",
+            tuhuUpload              : "com.tuhu.android:platform_upload:$versions.tuhuUpload",
+            tuhuDialog              : "com.tuhu.android:lib_dialog:$versions.tuhuDialog",
+            tuhuVideoRecorder       : "com.tuhu.android:platform_video_recorder:$versions.tuhuVideoRecorder",
+            allipayReader           : "com.tuhu:allinpay:$versions.allinpay",
+            tuhuSensorBury          : "com.tuhu.android:platform_sensor_bury:$versions.tuhuSensorBury",
+            mmkv                    : "com.tencent:mmkv-static:$versions.mmkv",
+            tuhuCertification       : "com.tuhu.android:lib_certification:$versions.tuhuCertification",
+            tuhuUtils               : "com.tuhu.android:lib_utils:$versions.tuhuUtils",
+            tuhuZiya                : "com.tuhu.android:lib_ziya:$versions.tuhuZiya",
+            tuhuPermission          : "com.tuhu.android:lib_permission:$versions.tuhuPermission",
+            tuhuBanner              : "com.tuhu.android:lib_banner:$versions.tuhuBanner",
+            tuhuMonitorScreenShot   : "com.tuhu.android:lib_monitor_screenshot:$versions.tuhuMonitorScreenShot",
+            tuhuPhotoview           : "com.tuhu.android:lib_photoview:$versions.tuhuPhotoview",
+            tuhuStickyView          : "com.tuhu.android:lib_sticky_view:$versions.tuhuStickyView",
+            tuhuSpeechText          : "com.tuhu.android:lib_speech_text:$versions.tuhuSpeechText",
+            tuhuPulltorefresh       : "com.tuhu.android:lib_pulltorefresh:$versions.tuhuPulltorefresh",
+            tuhuMVVM                : "com.tuhu.android:lib_mvvm:$versions.tuhuMVVM",
+            tuhuImageloader         : "com.tuhu.android:lib_imageloader:$versions.tuhuImageloader",
+            tuhuScancode            : "com.tuhu.android:lib_scancode:$versions.tuhuScancode",
+            tuhuLibWidget           : "com.tuhu.android:lib_widget:$versions.tuhuLibWidget",
+            tuhuGuide               : "com.tuhu.android:lib_guide:$versions.tuhuGuide",
+            tuhuFileReader          : "com.tuhu.android:platform_file_reader:$versions.tuhuFileReader",
+            tuhuVideoPlayer         : "com.tuhu.android:platform_video_player:$versions.tuhuVideoPlayer",
+            tuhuInput               : "com.tuhu.android:platform_input:$versions.tuhuInput",
+            tuhuPlatformWidget      : "com.tuhu.android:platform_widget:$versions.tuhuPlatformWidget",
+            tuhuPlatformTool        : "com.tuhu.android:platform_tool:$versions.tuhuPlatformTool",
+            tuhuPlatformTakePhoto   : "com.tuhu.android:platform_takephoto:$versions.tuhuPlatformTakePhoto",
+            tuhuPlatformScancode    : "com.tuhu.android:platform_scancode:$versions.tuhuPlatformScancode",
+            tuhuPlatformDispatch    : "com.tuhu.android:platform_dispatch:$versions.tuhuPlatformDispatch",
+            tuhuBusinessBase        : "com.tuhu.android:business_base:$versions.tuhuBusinessBase",
+            tuhuBusinessLogin       : "com.tuhu.android:business_login:$versions.tuhuBusinessLogin",
+            flexbox                 : "com.google.android:flexbox:2.0.1",
+            eventBus                : "org.greenrobot:eventbus:3.0.0",
+            tuhuLibLocation         : "com.tuhu.android:lib_location:$versions.tuhuLibLocation",
+            flutterToast            : "com.tuhu:fluttertoast_release:8.0.8@aar",
+            flutterUrlLauncher      : "com.tuhu:flutter_url_launcher_release:1.0.0@aar",
+            flutterSharedPreference : "com.tuhu:flutter_shared_preferences_release:8.0.8@aar",
+            flutterV7aso            : "io.flutter:armeabi_v7a_release:1.0.0-6ac856380fa4f66469552ce986edf59f65f7cd68",
+            flutterV8aso            : "io.flutter:arm64_v8a_release:1.0.0-6ac856380fa4f66469552ce986edf59f65f7cd68",
+            flutterEmbeddingRelease : "io.flutter:flutter_embedding_release:1.0.0-6ac856380fa4f66469552ce986edf59f65f7cd68",
+            flutterProject          : "com.tuhu.android:flutter_project_app:1.0.0@aar",
+            libFlutterCompiler      : "com.tuhu.android:lib_flutter_compiler:1.0.0@jar",
+            libFlutterAnnotation    : "com.tuhu.android:lib_flutter_annotation:1.0.0@jar",
+            weworkSdk               : "com.tuhu:weworkSdk:2.0.12.6@aar",
+            picker                  : "com.tuhu.android:lib_picker:1.0.1@aar",
+            fraudmetrix             : "com.tuhu:fraudmetrix:1.0.0@aar", // 同盾arr
+            tencentImsdk            : "com.tencent.imsdk:imsdk:5.1.56", // 腾讯IM SDK 直播组件中使用
+            libDanmu                : "com.tuhu.android:lib_danmu:1.1.0@aar",
+            tuhuPlatformNetwork     : "com.tuhu.android:platform_network:$versions.tuhuPlatformNetwork",
+            tuhuLibPushCore         : "com.tuhu.android:lib_push_core:$versions.tuhuLibPushCore",
+            huaweiPush              : "com.huawei.hms:push:4.0.3.301",
+            business_live           : 'com.tuhu.android:business_live:1.0.9@aar',
+            business_flutter_base   : 'com.tuhu.android:business_flutter_base_android:1.0.0@aar',
+            business_secondcar      : 'com.tuhu.android:business_secondcar:1.0.3@aar',
+            business_shop           : 'com.tuhu.android:business_shop:1.1.3@aar',
+            BaiduLBS_AndroidSDK_Lib : 'com.tuhu.android:BaiduLBS_AndroidSDK_Lib:1.0.0@aar',
+            business_employee       : 'com.tuhu.android:business_employee:1.2.3@aar',
+            business_adaptation     : 'com.tuhu.android:business_adaptation:1.1.8@aar',
+            business_welcome        : 'com.tuhu.android:business_welcome:1.1.8@aar',
+            business_selectcar      : 'com.tuhu.android:business_selectcar:1.0.1@aar',
+            tuhuBusinessQuotation   : "com.tuhu.android:business_quotation:$versions.tuhuBusinessQuotation",
+            tuhuBusinessWeb         : "com.tuhu.android:business_web:$versions.tuhuBusinessWeb",
+            flutterApp              : "cn.tuhu.th_flutter_app:flutter:0.6.22",
+            shimmerlayout           : "io.supercharge:shimmerlayout:2.1.0",
+            WbCloudFaceLiveSdk      : 'com.tuhu.android:WbCloudFaceLiveSdk_v404_e7c8352f:1.0.0@aar',
+            WbCloudNormal           : 'com.tuhu.android:WbCloudNormal_v506_f2277ff:1.0.0@aar',
+            business_certification  : 'com.tuhu.android:business_certification:1.0.0@aar',
+            business_document       : 'com.tuhu.android:business_document:1.0.2@aar',
+            business_message        : 'com.tuhu.android:business_message:1.0.0@aar',
+            business_purchase       : 'com.tuhu.android:business_purchase:1.0.4@aar',
+            business_reservation    : 'com.tuhu.android:business_reservation:1.0.2@aar',
+            business_homepage       : 'com.tuhu.android:business_homepage:1.0.6@aar',
+            tuhuBusinessPay         : "com.tuhu.android:business_pay:1.0.4@aar",
+            tuhuPvSdk               : 'com.tuhu.android:lib-track-pageview:0.0.3',
+            tuhuExposureSdk         : 'com.tuhu.android:lib-track-exposure:0.0.4-SNAPSHOT',
+            tuhuLifeCycleCommonJava : 'androidx.lifecycle:lifecycle-common-java8:2.1.0',
+            //Compose相关的配置
+            cp_ui_tool              : "androidx.compose.ui:ui-tooling:$compose_version",
+            cp_foundation           : "androidx.compose.foundation:foundation:$compose_version",
+            cp_material             : "androidx.compose.material:material:$compose_version",
+            cp_material_icon_core   : "androidx.compose.material:material-icons-core:$compose_version",
+            cp_material_icon_ext    : "androidx.compose.material:material-icons-extended:$compose_version",
+            cp_activity_compose     : "androidx.activity:activity-compose:1.3.1",
+            cp_lifecycle_viewmodel  : "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07",
+            cp_livedata             : "androidx.compose.runtime:runtime-livedata:$compose_version",
+            cp_rxjava2              : "androidx.compose.runtime:runtime-rxjava2:$compose_version",
+            cp_ui_test_junit4       : "androidx.compose.ui:ui-test-junit4:$compose_version",
+            cp_ui_preview           : "androidx.compose.ui:ui-tooling-preview:$compose_version",
+            cp_ui                   : "androidx.compose.ui:ui:$compose_version"
+
+
+    ]
+
+    debugDependencies = [
+            tuhuKefu   : "com.tuhu.kefu:tuhukefu:1.18.21-debug",
+            tuhuMock   : "cn.tuhu:mock-sdk-debug:1.1.3",
+            doraemonkit: "com.didichuxing.doraemonkit:dokitx:3.3.5",
+            //            doraemonkitLeakcanary: "com.didichuxing.doraemonkit:doraemonkit-leakcanary:3.2.0",
+    ]
+    if (rootProject.file('config.properties').exists()) {
+        Properties props = new Properties()
+        InputStream inputStream = rootProject.file('config.properties').newDataInputStream();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))
+        props.load(bufferedReader)
+        if (ext.has("config_fields")) {
+            ext.config_fields.putAll(props)
+        } else {
+            ext.config_fields = props
+        }
+    }
+
+    if (rootProject.file('publish.properties').exists()) {
+        Properties props = new Properties()
+        InputStream inputStream = rootProject.file('publish.properties').newDataInputStream();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))
+        props.load(bufferedReader)
+        if (ext.has("publish_fields")) {
+            ext.publish_fields.putAll(props)
+        } else {
+            ext.publish_fields = props
+        }
+    }
+}
+
+// 添加需要的maven仓库
+static def addRepos(RepositoryHandler repositoryHandler) {
+    repositoryHandler.google()
+
+    repositoryHandler.jcenter()
+
+    repositoryHandler.mavenCentral()
+    //    repositoryHandler.maven {
+    //        url 'https://nexus.tuhu.cn/nexus/repository/mobile-release/'
+    //    }
+    //    repositoryHandler.maven {
+    //        url 'https://nexus.tuhu.cn/nexus/repository/mobile-snapshot/'
+    //    }
+    //    repositoryHandler.maven {
+    //        url 'https://nexus.tuhu.cn/nexus/repository/thirdparty/'
+    //    }
+    repositoryHandler.maven {
+        url "https://storage.googleapis.com/download.flutter.io"
+    }
+//    repositoryHandler.maven {
+//        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+//    }
+
+    repositoryHandler.maven {
+        url 'https://jitpack.io'
+    }
+
+    repositoryHandler.maven {
+        url 'https://developer.huawei.com/repo/'
+    }
+
+    repositoryHandler.maven {
+        url 'https://jitpack.io'
+    }
+
+    //    repositoryHandler.maven {
+    //        url 'http://maven.tuhu.work:8088/repository/maven-public/'
+    //    }
+    //
+    //    repositoryHandler.maven {
+    //        url 'http://maven.tuhu.work:8088/repository/maven-releases'
+    //    }
+
+    //    repositoryHandler.maven {
+    //        url 'http://maven.tuhu.work:8088/repository/red_tiger'
+    //    }
+    //
+    //    repositoryHandler.maven {
+    //        url 'http://maven.tuhu.work:8088/repository/blue_tiger'
+    //    }
+
+    //    repositoryHandler.maven {
+    //        url 'https://nexus.tuhu.cn/nexus/content/repositories/snapshots/'
+    //    }
+
+    repositoryHandler.maven {
+        url 'https://mirrors.tencent.com/repository/maven/tencent_public'
+    }
+    repositoryHandler.maven {
+        url 'https://mirrors.tencent.com/nexus/repository/maven-public/'
+    }
+
+    repositoryHandler.maven {
+        url 'https://dl.bintray.com/zouyuhan/maven'
+    }
+}
+
+// 添加具体依赖库
+def addDepends(DependencyHandler handler) {
+    handler.classpath 'com.android.tools.build:gradle:4.2.2'
+    handler.classpath 'me.tatarka:gradle-retrolambda:3.7.0'
+    handler.classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+    handler.classpath 'com.novoda:bintray-release:0.8.0'
+    //添加神策分析 android-gradle-plugin 依赖
+    handler.classpath 'com.sensorsdata.analytics.android:android-gradle-plugin2:3.1.4'
+
+    handler.classpath 'com.meituan.android.walle:plugin:1.1.6'
+
+    handler.classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+    handler.classpath 'com.huawei.agconnect:agcp:1.4.1.300'
+    handler.classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.8'
+    handler.classpath 'com.didichuxing.doraemonkit:doraemonkit-plugin:3.2.0'
+    //    handler.classpath 'com.tuhu.android:lib_serviceLoader_plugin:0.0.3'
+    //    handler.classpath "com.tuhu.android:lib_dt_plugin:1.0.0"
+    handler.classpath 'com.android.databinding:dataBinder:1.0-rc1'
+    handler.classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    handler.classpath depsLibs.arouterRegister
+}
+
+ext.addRepos = this.&addRepos
+ext.addDepends = this.&addDepends
