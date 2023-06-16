@@ -18,8 +18,8 @@ ext {
 
     def versions = [:]
     versions.arouterRegisterVersion = "1.0.2"
-    versions.arouterVersion = "1.5.0"
-    versions.arouterProcessorVersion = "1.2.2"
+    versions.arouterVersion = "1.5.2"
+    versions.arouterProcessorVersion = "1.5.2"
     versions.ktxVersion = "1.3.2"
     versions.lifecycle_runtime_ktx = '2.5.1'
     versions.appcompat = "1.2.0"
