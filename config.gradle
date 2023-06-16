@@ -411,7 +411,7 @@ def addDepends(DependencyHandler handler) {
     //    handler.classpath "com.tuhu.android:lib_dt_plugin:1.0.0"
     handler.classpath 'com.android.databinding:dataBinder:1.0-rc1'
     handler.classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-    handler.classpath depsLibs.arouterRegister
+//    handler.classpath depsLibs.arouterRegister
 }
 
 ext.addRepos = this.&addRepos
