@@ -6,7 +6,7 @@ ext {
     buildToolsVersion = "30.0.3"
     minSdkVersion = 21
     targetSdkVersion = 28
-    compileSdkVersion = 28
+    compileSdkVersion = 30
     supportVersion = "27.1.1"
     ndkVersion = "21.3.6528147"
     cmakeVersion = "3.10.2"
