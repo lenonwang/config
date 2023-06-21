@@ -5,7 +5,7 @@ ext {
     kotlinx_version = '1.3.1'
     buildToolsVersion = "30.0.3"
     minSdkVersion = 21
-    targetSdkVersion = 28
+    targetSdkVersion = 30
     compileSdkVersion = 30
     supportVersion = "27.1.1"
     ndkVersion = "21.3.6528147"
