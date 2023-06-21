@@ -277,7 +277,7 @@ ext {
             tuhuExposureSdk         : 'com.tuhu.android:lib-track-exposure:0.0.4-SNAPSHOT',
             tuhuLifeCycleCommonJava : 'androidx.lifecycle:lifecycle-common-java8:2.1.0',
             //Compose相关的配置
-            cp_ui_tool              : "androidx.compose.ui:ui-tooling:+",
+            cp_ui_tool              : "androidx.compose.ui:ui-tooling:1.0.0-alpha07",
             cp_foundation           : "androidx.compose.foundation:foundation:$compose_version",
             cp_material             : "androidx.compose.material:material:$compose_version",
             cp_material_icon_core   : "androidx.compose.material:material-icons-core:$compose_version",
