@@ -1,7 +1,7 @@
 //！！为了更好的进行Lib库版本管理，config.gradle需要通过配置Wiki、运行libVersionControl脚本生成，不允许手动修改此文件！！
 ext {
     compose_version = '1.0.5'
-    kotlin_version = '1.6.0'
+    kotlin_version = '1.5.31'
     kotlinx_version = '1.3.1'
     buildToolsVersion = "30.0.3"
     minSdkVersion = 21
